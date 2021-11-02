@@ -14,7 +14,7 @@ function Card(props) {
   // }
   console.log(props.listMovie);
 
-  let title, overview, lancamento, adult, popularity, image = "http://image.tmdb.org/t/p/w500";
+  let title, overview, lancamento, adult, popularity, image = "http://image.tmdb.org/t/p/original";
 
   if (props.listMovie !== undefined) {
     title = props.listMovie.title;
@@ -22,7 +22,7 @@ function Card(props) {
     lancamento = props.listMovie.release_date;
     adult = props.listMovie.adult + "";
     popularity = props.listMovie.popularity;
-    image = image + props.listMovie.backdrop_path;
+    image = image + props.listMovie.poster_path;
   } else {
     title = 'IronMan';
     overview = "Produced by Marvel Studios and distributed by Paramount Pictures,[N 1] it is the first film in the Marvel Cinematic Universe (MCU).";
